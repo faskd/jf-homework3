@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>测试</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--新闻容器-->
+    <div class="news-container">
+      <div class="news"></div>
+    </div>
+    <!--分页容器-->
+    <div class="page-container">
+      <a class="page-item prev">&lt;</a>
+      <div class="pagination"></div>
+      <a class="page-item next">&gt;</a>
+    </div>
+
+    <!-- 定义新闻模板 -->
+    <script type="text/template" id="tpl">
+      <div class="news-item">
+          <div class="news-title">{{title}}</div>
+          <div class="news-content">{{content}}</div>
+      </div>
+    </script>
+
+    <script src="/index1.js"></script>
+  </body>
+</html>

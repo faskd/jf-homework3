@@ -1,0 +1,52 @@
+body {
+  background-color: #f8f8f8;
+}
+
+.news-container {
+  width: 75%;
+  margin: 50px auto;
+}
+
+.news { 
+  padding: 15px;
+  background-color: #fff;
+  height: 40px;
+}
+
+.news-item {
+  margin: 20px 0px;
+}
+
+.news-title {
+  text-align: left;
+  font-weight: 1000;
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+
+.page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-item {
+  display: inline-block;
+  color: #a2a2a2;
+  line-height: 50px;
+  padding: 0 20px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+.page-current,
+.page-item:hover {
+  background: #31c27c;
+  color: white;
+  cursor: pointer;
+}
+
+
+.skip input {
+  width: 50px;
+}

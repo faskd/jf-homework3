@@ -1,0 +1,136 @@
+ @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900"); /*导入Poppins字体 */
+*
+{
+     margin: 0; /*设置所有元素的外边距为0 */
+    padding: 0; /* 设置所有元素的内边距为0 */
+    font-family: 'Poppins', sans-serif;/* 设置所有元素的字体为Poppins */
+}
+
+body
+{
+    background: #000 url(bg.jpg); /* 设置页面的背景颜色为黑色，背景图片为bg.jpg */
+    
+    background-attachment: fixed; /* 设置背景图片不随页面滚动 */
+    background-blend-mode: hard-light; /* 设置背景图片的混合模式为硬光 */
+    
+}
+
+.container{
+    position: absolute; 
+    /* 设置容器元素的定位方式为绝对定位 */
+    top: 80px; 
+    /* 设置容器元素距离页面顶部的距离为80像素 */
+    left: 100px; 
+    /* 设置容器元素距离页面左侧的距离为100像素 */
+     right: 100px; 
+    /* 设置容器元素距离页面右侧的距离为100像素  */
+    bottom: 80px; 
+    /* 设置容器元素距离页面底部的距离为80像素 */
+    background: url(bg.jpg); 
+    /* 设置容器元素的背景图片为bg.jpg */
+    background-attachment: fixed; 
+    /* 设置背景图片不随页面滚动 */
+    display: flex; 
+    /* 设置容器元素的显示方式为弹性盒子 */
+    justify-content: center; 
+    /* 设置容器元素的子元素在水平方向上居中对齐 */
+    align-items: center; 
+    /* 设置容器元素的子元素在垂直方向上居中对齐 */
+    flex-direction: column; 
+    /* 设置容器元素的子元素排列方向为垂直方向 */
+    box-shadow: 0 50px 50px rgba(0,0,0,0.5),
+                0 0 0 100px rgba(0,0,0,.1); 
+    /* 设置容器元素的阴影效果，分别为内阴影和外阴影 */
+}
+
+.container h2 {
+    text-align: center; 
+    /* 设置标题元素的文本居中对齐 */
+    font-size: 10em; 
+    /* 设置标题元素的字体大小为10倍父元素字体大小 */
+    line-height: 0.7em; 
+    /* 设置标题元素的行高为0.7倍字体大小 */
+    color: #333; 
+    /* 设置标题元素的字体颜色为深灰色 */
+     margin-top: -80px; 
+    /*设置标题元素距离容器元素顶部的外边距为-80像素，即向上移动80像素 */
+}
+
+.container h2 span{
+    display: block; 
+    /* 设置标题中的span元素显示为块级元素，即独占一行 */
+    font-weight: 300; 
+    /* 设置span元素的字体粗细为300，即比正常字体稍微细一点 */
+    letter-spacing: 6px; 
+    /* 设置span元素的字母间距为6像素 */
+    font-size: 0.2em; 
+    /* 设置span元素的字体大小为0.2倍父元素字体大小，即标题元素字体大小 */
+}
+.countdown{
+    display: flex; 
+    /* 设置倒计时元素的显示方式为弹性盒子 */
+    margin-top: 50px; 
+    /* 设置倒计时元素距离容器元素顶部的外边距为50像素，即向下移动50像素 */
+}
+.countdown div{
+    position: relative; 
+    /* 设置倒计时中的每个div元素的定位方式为相对定位，即相对于自身位置进行偏移 */
+    width: 100px; 
+    /* 设置每个div元素的宽度为100像素 */
+    height: 100px; 
+    /* 设置每个div元素的高度为100像素 */
+    line-height: 100px; 
+    /* 设置每个div元素的行高为100像素，即与高度相同，这样可以使文本垂直居中 */
+    text-align: center; 
+    /* 设置每个div元素的文本水平居中对齐 */
+    background: #333; 
+    /* 设置每个div元素的背景颜色为深灰色 */
+    color: #fff; 
+    /* 设置每个div元素的字体颜色为白色 */
+    margin: 0 15px; 
+    /* 设置每个div元素的左右外边距为15像素，即两个div元素之间的间距为30像素 */
+    font-size: 3em; 
+    /* 设置每个div元素的字体大小为3倍父元素字体大小，即倒计时元素字体大小 */
+    font-weight: 500; 
+    /* 设置每个div元素的字体粗细为500，即比正常字体稍微粗一点 */
+}
+.countdown div:before{
+    content: ''; 
+    /* 设置每个div元素的伪元素（即在每个div元素之前插入一个虚拟的元素）的内容为空 */
+    position: absolute; 
+    /* 设置伪元素的定位方式为绝对定位，即相对于最近的定位祖先元素进行偏移，这里是相对于每个div元素 */
+    bottom: -30px; 
+    /* 设置伪元素距离每个div元素底部的距离为-30像素，即向下移动30像素 */
+    left: 0; 
+    /* 设置伪元素距离每个div元素左侧的距离为0，即不移动 */
+    width: 100%; 
+    /* 设置伪元素的宽度为100%，即与每个div元素相同 */
+    height: 35px; 
+    /* 设置伪元素的高度为35像素 */
+    background: #ff0; 
+    /* 设置伪元素的背景颜色为黄色 */
+    color: #333; 
+    /* 设置伪元素的字体颜色为深灰色 */
+    font-size: 0.35em; 
+    /* 设置伪元素的字体大小为0.35倍父元素字体大小，即每个div元素字体大小 */
+    line-height: 35px; 
+    /* 设置伪元素的行高为35像素，即与高度相同，这样可以使文本垂直居中 */
+    font-weight: 300; 
+    /* 设置伪元素的字体粗细为300，即比正常字体稍微细一点 */
+}
+.container #day:before{
+    content: 'Days'; 
+    /* 设置id为day的div元素的伪元素的内容为Days，即显示天数 */
+}
+.container #hour:before{
+    content: 'Hours'; 
+    /* 设置id为hour的div元素的伪元素的内容为Hours，即显示小时数 */
+}
+.container #minute:before{
+    content: 'Minutes'; 
+    /* 设置id为minute的div元素的伪元素的内容为Minutes，即显示分钟数 */
+}
+.container #second:before{
+    content: 'Seconds'; 
+    /* 设置id为second的div元素的伪元素的内容为Seconds，即显示秒数 */
+}

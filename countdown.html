@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Countdown to NCEE</title>
+    <link rel="stylesheet" href="style1.css" />
+    <!-- 导入样式表 -->
+  </head>
+  <body>
+    <div class="container">
+      <h2><span>Countdown to NCEE</span> 2021</h2>
+      <!-- 页面标题 -->
+      <div class="countdown">
+        <div id="day">NA</div>
+        <!-- 显示剩余天数的元素 -->
+
+        <div id="hour">NA</div>
+        <!-- 显示剩余小时的元素 -->
+
+        <div id="minute">NA</div>
+        <!-- 显示剩余分钟的元素 -->
+
+        <div id="second">NA</div>
+        <!-- 显示剩余秒数的元素 -->
+      </div>
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  // 获取指定年份的结束时间
+  function getEndTime(myYear) {
+    let myEndTime = new Date("" + myYear + "/06/07 00:00:00");
+    return myEndTime;
+  }
+
+  // 更新倒计时
+  function countDown() {
+    let mydate = new Date();
+    let year = "2021";
+    let EndTime = getEndTime(year);
+    let NowTime = new Date();
+
+    // 检查是否已经过了指定时间
+    if (EndTime.getTime() - NowTime.getTime() < 0) {
+      year = mydate.getFullYear() + 1;
+      EndTime = getEndTime(year);
+    }
+
+    let t = EndTime.getTime() - NowTime.getTime();
+
+    // 计算剩余的天数、小时、分钟和秒
+    let d = Math.floor(t / 1000 / 60 / 60 / 24);
+    let h = Math.floor((t / 1000 / 60 / 60) % 24);
+    let m = Math.floor((t / 1000 / 60) % 60);
+    let s = Math.floor((t / 1000) % 60);
+
+    // 更新页面上的倒计时元素
+    document.getElementById("day").innerText = d;
+    document.getElementById("hour").innerText = h;
+    document.getElementById("minute").innerText = m;
+    document.getElementById("second").innerText = s;
+  }
+
+  // 每隔1秒执行一次倒计时更新函数
+  setInterval(countDown, 1000);
+</script>
